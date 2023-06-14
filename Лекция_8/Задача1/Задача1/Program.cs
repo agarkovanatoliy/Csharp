@@ -7,7 +7,7 @@ class Program
 {
     static public void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Console.WriteLine($"Hello, {args[0].Replace("-","")}!");
         Console.ReadKey();
     }
 }
