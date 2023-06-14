@@ -2,16 +2,24 @@
 using System.Linq;
 using System.Text;
 using System.Net.Http;
+using ListMaster;
+using System.Runtime.CompilerServices;
 
-class Program
+namespace Task1
 {
-    static public void Main(string[] args)
+    class Program
     {
-        if (args.Length >= 1)
+        static public void Main(string[] args)
         {
-            if (args[0] = "")
-            Console.WriteLine($"Hello, {args[0].Replace("-", "")}!");
+            ArrayMaster am = new();
+            for (int i = 0; i < 10; i++)
+            {
+                am.Add(new Random().Next(1,5));
+            }
+            for (int i = 0;i < am.GetCount(); i++) 
+            { 
+                Console.WriteLine(am.GetValue(i));
+            }
         }
-        Console.ReadKey();
     }
 }
